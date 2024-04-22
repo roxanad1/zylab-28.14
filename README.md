@@ -17,11 +17,11 @@ Roxana
 
 Tiffany
 
-  - ModifyItem() ❌
-  - GetNumItemsInCart() ❌
-  - GetCostOfCart() ❌
-  - PrintTotal() ❌
-  - PrintDescriptions() ❌
+  - ModifyItem() ✅
+  - GetNumItemsInCart() ✅
+  - GetCostOfCart() ✅
+  - PrintTotal() ✅
+  - PrintDescriptions() ✅
     
 **main() class:**
   - PrintMenu() function ✅
