@@ -46,9 +46,9 @@ int ItemToPurchase::GetQuantity(){
 }
 
 void ItemToPurchase::PrintItemCost(){
-  cout << 
+  cout << itemName << " " << itemQuantity << " @ $" << itemPrice << " = $" << itemQuantiy*itemPrice << endl;
 }
 
 void ItemToPurchase::PrintItemDescription(){
-  cout << 
+  cout << itemName << ": " << itemDescription << endl;
 }
