@@ -9,7 +9,7 @@ using namespace std;
 
 void PrintMenu() {
    /* Type your code here */
-   cout << "MENU"
+   cout << "MENU" << endl;
    cout << "a - Add item to cart" << endl;
    cout << "d - Remove item from cart" << endl;
    cout << "c - Change item quantity" << endl;
@@ -25,9 +25,9 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
          court << "ADD ITEM TO CART" << endl;
          string name, description;
          int price, quantity;
-         court << "Enter the item name:" << endl;
+         cout << "Enter the item name:" << endl;
          getline(cin,name);
-         court << "Enter the item description:" << endl;
+         cout << "Enter the item description:" << endl;
          getline(cin, description);
          cout << "Enter the item price:" << endl;
          cin >> price;
