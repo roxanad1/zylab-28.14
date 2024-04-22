@@ -4,8 +4,8 @@ Roxana
 
 
 **Extend the ItemToPurchase class:**
-  - SetDescription() mutator ❌ 
-  - GetDescription() accessor ❌
+  - SetDescription() mutator ✅ 
+  - GetDescription() accessor ✅
   - PrintItemCost() ❌
   - PrintItemDescription() ❌
 
