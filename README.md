@@ -10,10 +10,10 @@ Roxana
   - PrintItemDescription() ✅
 
 **ShoppingCart class:**
-  - GetCustomerName() accessor ❌
-  - GetDate() accessor ❌
-  - AddItem() ❌
-  - RemoveItem() ❌
+  - GetCustomerName() accessor ✅
+  - GetDate() accessor ✅
+  - AddItem() ✅
+  - RemoveItem() ✅
 
 Tiffany
 
