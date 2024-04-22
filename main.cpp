@@ -17,7 +17,22 @@ void PrintMenu() {
 
 void ExecuteMenu(char option, ShoppingCart& theCart) {
    /* Type your code here */
-   
+   cin << option;
+   switch(option){
+      case 'a':
+         theCart.AddItem();
+      case 'b':
+         theCart.RemoveItem();
+      case 'c':
+
+      case 'i':
+
+      case 'o':
+
+      case 'q':
+
+   }
+      
 }
 
 int main() {
@@ -31,6 +46,8 @@ int main() {
    cin << todayDate;
    cout << "Customer name: " << name << endl;
    cout << "Today's date: " << todayDate << endl;
+
+   ShoppingCart shoppingCart;
    
    return 0;
 }
