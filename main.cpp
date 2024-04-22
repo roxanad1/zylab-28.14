@@ -22,7 +22,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
    /* Type your code here */
    switch(option){
       case 'a': {
-         court << "ADD ITEM TO CART" << endl;
+         cout << "ADD ITEM TO CART" << endl;
          string name, description;
          int price, quantity;
          cout << "Enter the item name:" << endl;
