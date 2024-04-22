@@ -24,7 +24,7 @@ Tiffany
   - PrintDescriptions() ❌
     
 **main() class:**
-  - PrintMenu() function ❌
+  - PrintMenu() function ✅
   - ExecuteMenu() ❌
   -   Implement menu options ❌
   - create object of type ShoppingCart ❌
