@@ -3,12 +3,13 @@ zyBooks: https://learn.zybooks.com/zybook/SMUCS1342YurukSpring2024/chapter/28/se
 Roxana
 
 
-Extend the ItemToPurchase class:
+**Extend the ItemToPurchase class:**
   - SetDescription() mutator ❌ 
   - GetDescription() accessor ❌
   - PrintItemCost() ❌
   - PrintItemDescription() ❌
-ShoppingCart class:
+
+**ShoppingCart class:**
   - GetCustomerName() accessor ❌
   - GetDate() accessor ❌
   - AddItem() ❌
@@ -21,7 +22,8 @@ Tiffany
   - GetCostOfCart() ❌
   - PrintTotal() ❌
   - PrintDescriptions() ❌
-main() class:
+    
+**main() class:**
   - PrintMenu() function ❌
   - ExecuteMenu() ❌
   -   Implement menu options ❌
