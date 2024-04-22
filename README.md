@@ -25,6 +25,6 @@ Tiffany
     
 **main() class:**
   - PrintMenu() function ✅
-  - ExecuteMenu() - WIP
-  -   Implement menu options ❌
-  - create object of type ShoppingCart ❌
+  - ExecuteMenu() ✅
+  -   Implement menu options ✅
+  - create object of type ShoppingCart ✅
