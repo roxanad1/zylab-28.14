@@ -10,21 +10,21 @@ Roxana
   - PrintItemDescription() ✅
 
 **ShoppingCart class:**
-  - GetCustomerName() accessor ❌
-  - GetDate() accessor ❌
-  - AddItem() ❌
-  - RemoveItem() ❌
+  - GetCustomerName() accessor ✅
+  - GetDate() accessor ✅
+  - AddItem() ✅
+  - RemoveItem() ✅
 
 Tiffany
 
-  - ModifyItem() ❌
-  - GetNumItemsInCart() ❌
-  - GetCostOfCart() ❌
-  - PrintTotal() ❌
-  - PrintDescriptions() ❌
+  - ModifyItem() ✅
+  - GetNumItemsInCart() ✅
+  - GetCostOfCart() ✅
+  - PrintTotal() ✅
+  - PrintDescriptions() ✅
     
 **main() class:**
   - PrintMenu() function ✅
-  - ExecuteMenu() ❌
-  -   Implement menu options ❌
-  - create object of type ShoppingCart ❌
+  - ExecuteMenu() ✅
+  -   Implement menu options ✅
+  - create object of type ShoppingCart ✅
