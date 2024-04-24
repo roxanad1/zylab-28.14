@@ -9,7 +9,7 @@ using namespace std;
 
 void PrintMenu() {
    /* Type your code here */
-   cout << "MENU"
+   cout << "MENU" << endl;
    cout << "a - Add item to cart" << endl;
    cout << "d - Remove item from cart" << endl;
    cout << "c - Change item quantity" << endl;
@@ -22,19 +22,19 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
    /* Type your code here */
    switch(option){
       case 'a': {
-         court << "ADD ITEM TO CART" << endl;
+         cout << "ADD ITEM TO CART" << endl;
          string name, description;
          int price, quantity;
-         court << "Enter the item name:" << endl;
+         cout << "Enter the item name:" << endl;
          getline(cin,name);
-         court << "Enter the item description:" << endl;
+         cout << "Enter the item description:" << endl;
          getline(cin, description);
          cout << "Enter the item price:" << endl;
          cin >> price;
          cout << "Enter the item quantity:" << endl;
          cin >> quantity;
          cin.ignore();
-         ItemPurchase newItem(name, description, price, quantity);
+         ItemToPurchase newItem(name, description, price, quantity);
          theCart.AddItem(newItem);
          break;
       }
@@ -74,7 +74,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
          break;
    }
    default:
-      cout << "Invalid option."
+      cout << "Invalid option.";
       
 }
 
@@ -84,13 +84,13 @@ int main() {
    string currentDate;
 
    cout << "Enter customer's name: " << endl;
-   cin << name;
+   cin >> name;
    cout << "Enter today's date: " << endl;
-   cin << currentDate;
+   cin >> currentDate;
    cout << "Customer name: " << name << endl;
-   cout << "Today's date: " << todayDate << endl;
-
-   ShoppingCart myCart(customerName, currentDate);
+   cout << "Today's date: " << currentDate << endl;
+   
+   ShoppingCart myCart(name, currentDate);
 
    char choice;
    do{
