@@ -70,10 +70,9 @@ int ShoppingCart::GetNumItemsInCart() {
 }
 
 int ShoppingCart::GetCostOfCart() {
-  int totalPrice = 0;
   int price;
   int quantity;
-  int totalPrice;
+  int totalPrice = 0;
   for(int i = 0; i < cartItems.size(); ++i){
     price = cartItems.at(i).GetPrice();
     quantity = cartItems.at(i).GetQuantity();
