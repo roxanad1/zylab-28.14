@@ -1,5 +1,5 @@
 // git repository link
-// team members: 
+// team members: Roxana Dicusara and Tiffany Nguyen
 
 #include <iostream>
 #include <iomanip>
