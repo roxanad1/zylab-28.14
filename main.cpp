@@ -20,61 +20,55 @@ void PrintMenu() {
 
 void ExecuteMenu(char option, ShoppingCart& theCart) {
    /* Type your code here */
-   switch(option){
-      case 'a': 
-         cout << "ADD ITEM TO CART" << endl;
-         string name, description;
-         int price, quantity;
-         cout << "Enter the item name:" << endl;
-         getline(cin,name);
-         cout << "Enter the item description:" << endl;
-         getline(cin, description);
-         cout << "Enter the item price:" << endl;
-         cin >> price;
-         cout << "Enter the item quantity:" << endl;
-         cin >> quantity;
-         cin.ignore();
-         ItemToPurchase newItem(name, description, price, quantity);
-         theCart.AddItem(newItem);
-         break;
-      
-      case 'd':
-         cout << "REMOVE ITEM FROM CART" << endl;
-         string itemName;
-         cout << "Enter name of item to remove:" << endl;
-         getline(cin,itemName);
-         theCart.RemoveItem(itemName);
-         break;
-      
-      case 'c':
-         cout << "CHANGE ITEM QUANTITY" << endl;
-         string itemName;
-         cout << "Enter the item name:" << endl;
-         getline(cin, itemName);
+   if (option == 'a'){
+      string name, description;
+      int price, quantity;
+      cout << "ADD ITEM TO CART" << endl;
+      cout << "Enter the item name:" << endl;
+      getline(cin,name);
+      cout << "Enter the item description:" << endl;
+      getline(cin, description);
+      cout << "Enter the item price:" << endl;
+      cin >> price;
+      cout << "Enter the item quantity:" << endl;
+      cin >> quantity;
+      cin.ignore();
+      ItemToPurchase newItem(name, description, price, quantity);
+      theCart.AddItem(newItem);
+   }
+   else if (option == 'd'){
+      cout << "REMOVE ITEM FROM CART" << endl;
+      string itemName;
+      cout << "Enter name of item to remove:" << endl;
+      getline(cin,itemName);
+      theCart.RemoveItem(itemName);
+   }
+   else if (option == 'c'){
+      cout << "CHANGE ITEM QUANTITY" << endl;
+      string itemName;
+      cout << "Enter the item name:" << endl;
+      getline(cin, itemName);
 
-         int newQuantity;
-         cout << "Enter the new quantity:" << endl;
-         cin >> newQuantity;
-         cin.ignore();
-         ItemToPurchase newItem(itemName, "", 0, newQuantity);
-         theCart.ModifyItem(newItem);
-         break;
-      
-      case 'i': 
-         cout << "OUTPUT ITEMS' DESCRIPTIONS" << endl;
-         theCart.PrintDescriptions();
-         break;
-      
-      case 'o': 
-         cout << "OUTPUT SHOPPING CART" << endl;
-         theCart.PrintTotal();
-         break;
-      
-      case 'q':
-         break;
-      
-      default:
-         cout << "Invalid option." << endl;
+      int newQuantity;
+      cout << "Enter the new quantity:" << endl;
+      cin >> newQuantity;
+      cin.ignore();
+      ItemToPurchase newItem(itemName, "", 0, newQuantity);
+      theCart.ModifyItem(newItem);
+   }
+   else if (option == 'i'){
+      cout << "OUTPUT ITEMS' DESCRIPTIONS" << endl;
+      theCart.PrintDescriptions();
+   }
+   else if (option == 'o'){
+      cout << "OUTPUT SHOPPING CART" << endl;
+      theCart.PrintTotal();
+   }
+   else if (option == 'q'){
+
+   }
+   else{
+      cout << "Invalid option" << endl;
    }
 }
 
