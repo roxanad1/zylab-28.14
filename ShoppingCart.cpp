@@ -15,7 +15,7 @@ ShoppingCart::ShoppingCart(string name, string date){
   currentDate = date;
 }
 
-string ShoppingCart::GetCustomerName(){
+string ShoppingCart::GetCustomerName() const{
   return customerName;
 }
 
@@ -56,7 +56,7 @@ void ShoppingCart::ModifyItem(ItemToPurchase item) {
   return;
 }
 
-int ShoppingCart::GetNumItemsInCart() const {
+int ShoppingCart::GetNumItemsInCart() {
   int totalQuantity = 0;
   for(const ItemToPurchase& item : cartItems) {
     totalQuantity += item.GetQuantity();
@@ -64,7 +64,7 @@ int ShoppingCart::GetNumItemsInCart() const {
   return totalQuantity;
 }
 
-int ShoppingCart::GetCostOfCart() const {
+int ShoppingCart::GetCostOfCart() {
   int totalPrice = 0;
   int price;
   int quantity;
@@ -77,7 +77,7 @@ int ShoppingCart::GetCostOfCart() const {
   return sum;
 }
 
-void ShoppingCart::PrintTotal() const {
+void ShoppingCart::PrintTotal() {
   string name;
   int price;
   int quantity;
@@ -104,7 +104,7 @@ void ShoppingCart::PrintTotal() const {
   return;
 }
 
-void ShoppingCart::PrintDescriptions() const {
+void ShoppingCart::PrintDescriptions() {
   cout << GetCustomerName() << "'s Shopping Cart - " << GetDate() << endl;
   cout << "Item Descriptions" << endl;
   if(cartItems.empty()){
