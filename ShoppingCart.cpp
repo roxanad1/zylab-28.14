@@ -19,7 +19,7 @@ string ShoppingCart::GetCustomerName(){
   return customerName;
 }
 
-string ShoppingCart::GetDate(){
+string ShoppingCart::GetDate() const{
   return currentDate;
 }
 
@@ -39,7 +39,7 @@ void ShoppingCart::ModifyItem(ItemToPurchase item) {
     int price = cartItems.at(i).GetPrice();
     int quantity = cartItems.at(i).GetQuantity();
 
-    if((!found) && (name = item.GetName())) {
+    if((!found) && (name == item.GetName())) {
       if((description != "none") && (price != 0) && (quantity != 0)) {
         item.SetName(name);
         item.SetName(description);
