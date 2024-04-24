@@ -21,7 +21,7 @@ class ShoppingCart {
       void ModifyItem(ItemToPurchase item);
       
       int GetNumItemsInCart();
-      double GetCostOfCart();
+      int GetCostOfCart();
       
       void PrintTotal();
       void PrintDescriptions();
