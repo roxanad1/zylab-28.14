@@ -34,23 +34,24 @@ void ShoppingCart::RemoveItem(string name){
 void ShoppingCart::ModifyItem(ItemToPurchase item) {
   bool found = false;
   for(int i = 0; i < cartItems.size(); ++i){
-    if(cartItems[i].GetDescription() == newItem.GetDescription());
-      if(newItem.GetDescription() != "none") {
-        cartItems[i].SetDescription(newItem.GetDescription());
+    if(cartItems[i].GetDescription() == item.GetDescription()){
+      if(item.GetDescription() != "none") {
+        cartItems[i].SetDescription(item.GetDescription());
       }
-    string name = cartItems.at(i).GetName();
-    string description = cartItems.at(i).GetDescription();
-    int price = cartItems.at(i).GetPrice();
-    int quantity = cartItems.at(i).GetQuantity();
+      string name = cartItems.at(i).GetName();
+      string description = cartItems.at(i).GetDescription();
+      int price = cartItems.at(i).GetPrice();
+      int quantity = cartItems.at(i).GetQuantity();
 
-    if((!found) && (name == item.GetName())) {
-      if((description != "none") && (price != 0) && (quantity != 0)) {
-        item.SetName(name);
-        item.SetName(description);
-        item.SetPrice(price);
-
-        cartItems.at(i) = item;
-        found = true;
+      if((!found) && (name == item.GetName())) {
+        if((description != "none") && (price != 0) && (quantity != 0)) {
+          item.SetName(name);
+          item.SetName(description);
+          item.SetPrice(price);
+  
+          cartItems.at(i) = item;
+          found = true;
+        }
       }
     }
   }
