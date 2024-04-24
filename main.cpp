@@ -34,7 +34,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
          cout << "Enter the item quantity:" << endl;
          cin >> quantity;
          cin.ignore();
-         ItemPurchase newItem(name, description, price, quantity);
+         ItemToPurchase newItem(name, description, price, quantity);
          theCart.AddItem(newItem);
          break;
       }
@@ -74,7 +74,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
          break;
    }
    default:
-      cout << "Invalid option."
+      cout << "Invalid option.";
       
 }
 
@@ -84,13 +84,13 @@ int main() {
    string currentDate;
 
    cout << "Enter customer's name: " << endl;
-   cin << name;
+   cin >> name;
    cout << "Enter today's date: " << endl;
-   cin << currentDate;
+   cin >> currentDate;
    cout << "Customer name: " << name << endl;
-   cout << "Today's date: " << todayDate << endl;
-
-   ShoppingCart myCart(customerName, currentDate);
+   cout << "Today's date: " << currentDate << endl;
+   
+   ShoppingCart myCart(name, currentDate);
 
    char choice;
    do{
