@@ -6,10 +6,11 @@ using namespace std;
 ItemToPurchase::ItemToPurchase(){
 }
 
-ItemToPurchase::ItemToPurchase(string name, string description, int price, int quantity = 0){
+ItemToPurchase::ItemToPurchase(string name, string description, int price, int quantity){
   itemName = name;
   itemDescription = description;
   itemPrice = price;
+  quantity = 0;
   itemQuantity = quantity;
 }
 
