@@ -34,6 +34,10 @@ void ShoppingCart(string name){
 void ShoppingCart::ModifyItem(ItemToPurchase item) {
   bool found = false;
   for(int i = 0; i < cartItems.size(); ++i){
+    if(cartitems[i].GetDescription() == newItem.GetDescription());
+      if(newItem.GetDescription() != "none") {
+        cartItems[i].SetDescription(newItem.GetDescription());
+      }
     string name = cartItems.at(i).GetName();
     string description = cartItems.at(i).GetDescription();
     int price = cartItems.at(i).GetPrice();
