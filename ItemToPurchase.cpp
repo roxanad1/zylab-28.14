@@ -29,19 +29,19 @@ void ItemToPurchase::SetQuantity(int quantity) {
   itemQuantity = quantity;
 }
 
-string ItemToPurchase::GetName(){
+string ItemToPurchase::GetName() const{
   return itemName;
 }
 
-string ItemToPurchase::GetDescription(){
+string ItemToPurchase::GetDescription() const{
   return itemDescription;
 }
 
-int ItemToPurchase::GetPrice(){
+int ItemToPurchase::GetPrice() const{
   return itemPrice;
 }
 
-int ItemToPurchase::GetQuantity(){
+int ItemToPurchase::GetQuantity() const{
   return itemQuantity;
 }
 
