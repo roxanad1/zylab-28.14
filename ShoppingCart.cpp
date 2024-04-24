@@ -35,7 +35,7 @@ void ShoppingCart::ModifyItem(const ItemToPurchase& newItem){
   bool found = false;
   for(int i = 0; i < cartItems.size(); ++i){
     if(cartitems[i].GetDescription() == newItem.GetDescription());
-      if(newItem.GetDescription() == != "none) {
+      if(newItem.GetDescription() != "none") {
         cartItems[i].SetDescription(newItem.GetDescription());
       }
         found = true;
