@@ -68,7 +68,6 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
 
    }
    else{
-      cout << "Invalid option" << endl;
    }
 }
 
@@ -77,19 +76,19 @@ int main() {
    string name;
    string currentDate;
 
-   cout << "Enter customer's name: " << endl;
-   cin >> name;
-   cout << "Enter today's date: " << endl;
-   cin >> currentDate;
+   cout << "Enter customer's name:" << endl;
+   getline(cin, name);
+   cout << "Enter today's date:" << endl;
+   getline(cin, currentDate);
    cout << "Customer name: " << name << endl;
    cout << "Today's date: " << currentDate << endl;
    
    ShoppingCart myCart(name, currentDate);
 
    char choice;
+   PrintMenu();
+   cout << endl;
    do{
-      PrintMenu();
-      cout << endl;
       cout << "Choose an option:" << endl;
       cin >> choice;
       cin.ignore();
