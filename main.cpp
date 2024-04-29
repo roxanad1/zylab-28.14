@@ -79,9 +79,11 @@ int main() {
    cout << "Enter customer's name:" << endl;
    getline(cin, name);
    cout << "Enter today's date:" << endl;
+   cout << endl;
    getline(cin, currentDate);
    cout << "Customer name: " << name << endl;
    cout << "Today's date: " << currentDate << endl;
+   cout << endl;
    
    ShoppingCart myCart(name, currentDate);
 
