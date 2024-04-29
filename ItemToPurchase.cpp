@@ -10,7 +10,6 @@ ItemToPurchase::ItemToPurchase(string name, string description, int price, int q
   itemName = name;
   itemDescription = description;
   itemPrice = price;
-  quantity = 0;
   itemQuantity = quantity;
 }
 
