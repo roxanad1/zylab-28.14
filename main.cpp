@@ -42,13 +42,14 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
             break;
         }
         case 'd': {
-            cout "\n" << "REMOVE ITEM FROM CART" << endl;
+            cout << "\nREMOVE ITEM FROM CART" << endl;
             string itemName;
             cout << "Enter name of item to remove:";
-            cin.ignore();
+            // cin.ignore();
             getline(cin, itemName);
             cout << endl;
-            theCart.RemoveItem(itemName);
+            theCart.RemoveItem(itemName); 
+            // cout << endl;
             PrintMenu();
             break;
         }
@@ -64,20 +65,21 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
             cin.ignore();
             ItemToPurchase newItem(itemName, "", 0, newQuantity);
             theCart.ModifyItem(newItem);
+            cout << endl;
             PrintMenu();
             break;
         }
         case 'i': {
             cout << endl << "OUTPUT ITEMS' DESCRIPTIONS" << endl;
             theCart.PrintDescriptions();
-            // PrintMenu();
+            PrintMenu();
             break;
         }
         case 'o': {
             cout << endl << "OUTPUT SHOPPING CART" << endl;
             theCart.PrintTotal();
             cout << endl;
-            PrintMenu();
+            // PrintMenu();
             break;
         }
         case 'q': {
@@ -115,8 +117,11 @@ int main() {
    do{
       cout << "Choose an option:";
       cin >> choice;
-      //cin.ignore();
+      // cin.ignore();
       ExecuteMenu(choice, myCart);
+      if(choice == 'o'){
+         PrintMenu();   
+      }
       cout << endl;
    } while (choice != 'q');
    
