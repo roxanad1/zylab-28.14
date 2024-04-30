@@ -111,18 +111,14 @@ int main() {
    ShoppingCart myCart(name, currentDate);
 
    char choice;
-   PrintMenu();
-   cout << endl;
+   // cout << endl;
    
    do{
+      PrintMenu();
       cout << "Choose an option:";
       cin >> choice;
-      // cin.ignore();
+      cin.ignore();
       ExecuteMenu(choice, myCart);
-      if(choice == 'o'){
-         PrintMenu();   
-      }
-      cout << endl;
    } while (choice != 'q');
    
    return 0;
