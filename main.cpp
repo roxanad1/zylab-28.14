@@ -1,4 +1,4 @@
-// git repository link: https://github.com/roxanad1/zylab-28.14
+// git repository link: https://github.com/roxanad1/zylab-28.14.git
 // team members: Roxana Dicusara and Tiffany Nguyen
 
 #include <iostream>
