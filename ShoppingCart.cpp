@@ -8,11 +8,15 @@ using namespace std;
 
 
 ShoppingCart::ShoppingCart(){
+   customerName = "none";
+   currentDate = "April 29, 2024";
+   return;
 }
 
-ShoppingCart::ShoppingCart(string name, string date){
-  customerName = name;
-  currentDate = date;
+ShoppingCart::ShoppingCart(string customerName, string currentDate){
+  this->customerName = customerName;
+  this->currentDate = currentDate;
+  return;
 }
 
 string ShoppingCart::GetCustomerName() const{
@@ -28,7 +32,17 @@ void ShoppingCart::AddItem(ItemToPurchase item){
 }
 
 void ShoppingCart::RemoveItem(string name){
-  customerName = name;
+  bool found = false;
+  for(int i = 0; i < cartItems.size(); i++){
+   if((cartItems.at(i).GetName() == name) && (!found)){
+      cartItems.erase(cartItems.begin() + i);
+      found = true;
+   }
+  }
+  if(!found){
+   cout << "Item not found in cart. Nothing removed." << endl << endl;;   
+  }
+  return;
 }
 
 void ShoppingCart::ModifyItem(ItemToPurchase item) {
@@ -56,7 +70,7 @@ void ShoppingCart::ModifyItem(ItemToPurchase item) {
     }
   }
   if(!found) {
-    cout << "Item not found in cart. Nothing modified." << endl;
+    cout << "Item not found in cart. Nothing modified." << endl << endl;
   }
   return;
 }
@@ -100,7 +114,7 @@ void ShoppingCart::PrintTotal() {
       price = cartItems.at(i).GetPrice();
       quantity = cartItems.at(i).GetQuantity();
       totalPrice = price * quantity;
-      cout << name << " " << quantity << " @ $" << price << " =  $" << totalPrice << endl;
+      cout << name << " " << quantity << " @ $" << price << " = $" << totalPrice << endl;
 
       total += totalPrice;
     }
