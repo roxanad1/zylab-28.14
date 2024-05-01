@@ -42,10 +42,11 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
             break;
         }
         case 'd': {
-            cout << "\nREMOVE ITEM FROM CART" << endl;
+            cout << "\n";
+            cout << "REMOVE ITEM FROM CART" << endl;
             string itemName;
             cout << "Enter name of item to remove:";
-            // cin.ignore();
+            cin.ignore();
             getline(cin, itemName);
             cout << endl;
             theCart.RemoveItem(itemName); 
@@ -111,14 +112,18 @@ int main() {
    ShoppingCart myCart(name, currentDate);
 
    char choice;
-   // cout << endl;
+   PrintMenu();
+   cout << endl;
    
    do{
-      PrintMenu();
       cout << "Choose an option:";
       cin >> choice;
-      cin.ignore();
+      // cin.ignore();
       ExecuteMenu(choice, myCart);
+      if(choice == 'o'){
+         PrintMenu();   
+      }
+      cout << endl;
    } while (choice != 'q');
    
    return 0;
