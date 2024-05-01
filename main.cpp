@@ -1,4 +1,4 @@
-// git repository link: https://github.com/roxanad1/zylab-28.14
+// git repository link: https://github.com/roxanad1/zylab-28.14.git
 // team members: Roxana Dicusara and Tiffany Nguyen
 
 #include <iostream>
@@ -8,7 +8,7 @@ using namespace std;
 #include "ShoppingCart.h"
 
 void PrintMenu() {
-   /* Type your code here */
+
    cout << "MENU" << endl;
    cout << "a - Add item to cart" << endl;
    cout << "d - Remove item from cart" << endl;
@@ -19,80 +19,77 @@ void PrintMenu() {
 }
 
 void ExecuteMenu(char option, ShoppingCart& theCart) {
-   /* Type your code here */
    switch(option) {
-        case 'a': {
-            cout << "\n" << "ADD ITEM TO CART" << endl;
-            string name, description;
-            int price, quantity;
-            cout << "Enter the item name:" << endl;
-            cin.ignore();
-            getline(cin, name);
-            cout << "Enter the item description:" << endl;
-            getline(cin, description);
-            cout << "Enter the item price:" << endl;
-            cin >> price;
-            cout << "Enter the item quantity:" ;
-            cin >> quantity;
-            cout << endl << endl;
-            cin.ignore();
-            ItemToPurchase newItem(name, description, price, quantity);
-            theCart.AddItem(newItem);
-            PrintMenu();
-            break;
-        }
-        case 'd': {
-            cout << "\nREMOVE ITEM FROM CART" << endl;
-            string itemName;
-            cout << "Enter name of item to remove:";
-            // cin.ignore();
-            getline(cin, itemName);
-            cout << endl;
-            theCart.RemoveItem(itemName); 
-            // cout << endl;
-            PrintMenu();
-            break;
-        }
-        case 'c': {
-            cout << "\n" << "CHANGE ITEM QUANTITY" << endl;
-            string itemName;
-            cout << "Enter the item name:" << endl;
-            cin.ignore();
-            getline(cin, itemName);
-            int newQuantity;
-            cout << "Enter the new quantity:" << endl;
-            cin >> newQuantity;
-            cin.ignore();
-            ItemToPurchase newItem(itemName, "", 0, newQuantity);
-            theCart.ModifyItem(newItem);
-            cout << endl;
-            PrintMenu();
-            break;
-        }
-        case 'i': {
-            cout << endl << "OUTPUT ITEMS' DESCRIPTIONS" << endl;
-            theCart.PrintDescriptions();
-            PrintMenu();
-            break;
-        }
-        case 'o': {
-            cout << endl << "OUTPUT SHOPPING CART" << endl;
-            theCart.PrintTotal();
-            cout << endl;
-            // PrintMenu();
-            break;
-        }
-        case 'q': {
-            break; // Quit the loop
-        }
-        default: {
-            break;
-        }
-    }
+      case 'a': {
+         cout << "ADD ITEM TO CART" << endl;
+         string name, description;
+         int price, quantity;
+         cout << "Enter the item name:" << endl;
+         cin.ignore();
+         getline(cin, name);
+         cout << "Enter the item description:" << endl;
+         getline(cin, description);
+         cout << "Enter the item price:" << endl;
+         cin >> price;
+         cout << "Enter the item quantity:" ;
+         cin >> quantity;
+         cout << endl << endl;
+         cin.ignore();
+         ItemToPurchase newItem(name, description, price, quantity);
+         theCart.AddItem(newItem);
+         PrintMenu();
+         break;
+      }
+      case 'd': {
+         cout << "REMOVE ITEM FROM CART" << endl;
+         string itemName;
+         cout << "Enter name of item to remove:";
+         cin.ignore();
+         getline(cin, itemName);
+         cout << endl;
+         theCart.RemoveItem(itemName); 
+         PrintMenu();
+         break;
+      }
+      case 'c': {
+         cout << "CHANGE ITEM QUANTITY" << endl;
+         string itemName;
+         cout << "Enter the item name:" << endl;
+         cin.ignore();
+         getline(cin, itemName);
+         int newQuantity;
+         cout << "Enter the new quantity:" << endl;
+         cin >> newQuantity;
+         cin.ignore();
+         ItemToPurchase newItem(itemName, "", 0, newQuantity);
+         theCart.ModifyItem(newItem);
+         cout << endl;
+         PrintMenu();
+         break;
+      }
+      case 'i': {
+         cout << "OUTPUT ITEMS' DESCRIPTIONS" << endl;
+         theCart.PrintDescriptions();
+         PrintMenu();
+         break;
+      }
+      case 'o': {
+         cout << "OUTPUT SHOPPING CART" << endl;
+         theCart.PrintTotal();
+         cout << endl;
+         break;
+      }
+      case 'q': {
+         break; // Quit the loop
+      }
+      default: {
+         break;
+      }
+   }
 }
 
 int main() {
-   /* Type your code here */
+   
    string name;
    string currentDate;
 
@@ -117,7 +114,9 @@ int main() {
    do{
       cout << "Choose an option:";
       cin >> choice;
-      // cin.ignore();
+      if (choice == 'a' || choice == 'd' || choice == 'o' || choice == 'i' || choice == 'c'){
+         cout << endl;
+      }
       ExecuteMenu(choice, myCart);
       if(choice == 'o'){
          PrintMenu();   
