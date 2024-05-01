@@ -3,52 +3,51 @@ using namespace std;
 
 #include "ItemToPurchase.h"
 
-ItemToPurchase::ItemToPurchase(){
-}
+ItemToPurchase::ItemToPurchase() : itemDescription("none") {}
 
 ItemToPurchase::ItemToPurchase(string name, string description, int price, int quantity){
-  itemName = name;
-  itemDescription = description;
-  itemPrice = price;
-  itemQuantity = quantity;
+   itemName = name;
+   itemDescription = description;
+   itemPrice = price;
+   itemQuantity = quantity;
 }
 
 void ItemToPurchase::SetName(string name) {
-  itemName = name;
+   itemName = name;
 }
 
 void ItemToPurchase::SetDescription(string description){
-  itemDescription = description;
+   itemDescription = description;
 }
 
 void ItemToPurchase::SetPrice(int price) {
-  itemPrice = price;
+   itemPrice = price;
 }
 
 void ItemToPurchase::SetQuantity(int quantity) {
-  itemQuantity = quantity;
+   itemQuantity = quantity;
 }
 
 string ItemToPurchase::GetName() const{
-  return itemName;
+   return itemName;
 }
 
 string ItemToPurchase::GetDescription() const{
-  return itemDescription;
+   return itemDescription;
 }
 
 int ItemToPurchase::GetPrice() const{
-  return itemPrice;
+   return itemPrice;
 }
 
 int ItemToPurchase::GetQuantity() const{
-  return itemQuantity;
+   return itemQuantity;
 }
 
 void ItemToPurchase::PrintItemCost(){
-  cout << itemName << " " << itemQuantity << " @ $" << itemPrice << " = $" << itemQuantity*itemPrice << endl;
+   cout << itemName << " " << itemQuantity << " @ $" << itemPrice << " = $" << itemQuantity*itemPrice << endl;
 }
 
 void ItemToPurchase::PrintItemDescription(){
-  cout << itemName << ": " << itemDescription << endl;
+   cout << itemName << ": " << itemDescription << endl;
 }
